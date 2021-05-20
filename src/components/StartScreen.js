@@ -4,8 +4,6 @@ import { StatusBar } from 'expo-status-bar';
 import Logo from '../image/logo.png'
 import Name from '../image/name.png'
 import People from '../image/people.png'
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
 
 const StartScreen = ({navigation}) => {
     return(

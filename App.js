@@ -1,12 +1,12 @@
 import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, Button, Alert } from 'react-native';
+import { StyleSheet, Image } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native'
 import {createStackNavigator} from '@react-navigation/stack'
 
 import StartScreen from './src/components/StartScreen'
-import SignInUp from './src/components/SignInUp'
+import SignScreen from './src/components/SignUp'
 
 let Stack = createStackNavigator()
 
@@ -15,7 +15,14 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
         <Stack.Screen name="Start" component={StartScreen} /> 
-        <Stack.Screen name="Sign" component={SignInUp} /> 
+        <Stack.Screen name="Sign" component={SignScreen} options={{
+    headerTitle: () => (
+        <Image
+        style={{alignSelf:'center'}}
+        source={require('./src/image/nameOrange.png')}
+        />
+    ),
+    }}/> 
       </Stack.Navigator>
     </NavigationContainer>
   );
