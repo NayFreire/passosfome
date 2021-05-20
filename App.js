@@ -10,22 +10,6 @@ import SignInUp from './src/components/SignInUp'
 
 let Stack = createStackNavigator()
 
-
-
-
-// export default function App() {
-//   return (
-//     <View style={styles.container}>
-//       <View style={styles.logo}>
-//         <Text>PF</Text>
-//         <Text>Passos Fome</Text>
-//       </View>
-//       <Button title='Começar Agora' onPress={() => Alert.alert('Simple Button pressed')}></Button>
-//       <StatusBar style="auto" />
-//     </View>
-//   );
-// }
-
 export default function App() {
   return (
     <NavigationContainer>
