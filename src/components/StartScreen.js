@@ -11,8 +11,10 @@ const StartScreen = ({navigation}) => {
     return(
         <View style={styleStart.mainView}>
             
-            <Image source={Logo} style={styleStart.logo}/>
-            <Image source={Name}/>
+            <View style={styleStart.logoView}>
+                <Image source={Logo} style={styleStart.logo}/>
+                <Image source={Name} style={{marginLeft: 40}}/>
+            </View>
             <Image source={People} style={styleStart.people}/>
             <View style={{alignItems: 'center'}}>
                 <TouchableOpacity style={styleStart.btn} onPress={() => navigation.push('Sign')}>
@@ -31,9 +33,11 @@ const styleStart = StyleSheet.create({
         paddingHorizontal: 10,
         paddingVertical: 10
     },
+    logoView:{
+        // backgroundColor: '#e1e1e1'
+    },
     logo: {
-        marginTop: 70,
-        marginLeft: 40
+        margin: 40
     },
     people: {
         marginLeft: -8,
