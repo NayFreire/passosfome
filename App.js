@@ -6,23 +6,21 @@ import {NavigationContainer} from '@react-navigation/native'
 import {createStackNavigator} from '@react-navigation/stack'
 
 import StartScreen from './src/components/StartScreen'
-import SignScreen from './src/components/SignUp'
+import SignScreen from './src/components/SignScreen'
+import HomeScreen from './src/components/HomeScreen'
+import SignIn from './src/components/SignIn'
+import SignUp from './src/components/SignUp'
+const navigationRef = React.createRef();
 
 let Stack = createStackNavigator()
 
 export default function App() {
   return (
-    <NavigationContainer>
+    <NavigationContainer ref={navigationRef}>
       <Stack.Navigator screenOptions={{headerShown: false}}>
         <Stack.Screen name="Start" component={StartScreen} /> 
-        <Stack.Screen name="Sign" component={SignScreen} options={{
-    headerTitle: () => (
-        <Image
-        style={{alignSelf:'center'}}
-        source={require('./src/image/nameOrange.png')}
-        />
-    ),
-    }}/> 
+        <Stack.Screen name="Sign" component={SignScreen} /> 
+        <Stack.Screen name="Home" component={HomeScreen} />        
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -6,6 +6,7 @@ import Name from '../image/name.png'
 import People from '../image/people.png'
 
 const StartScreen = ({navigation}) => {
+    console.log({navigation})
     return(
         <View style={styleStart.mainView}>
             
@@ -15,7 +16,7 @@ const StartScreen = ({navigation}) => {
             </View>
             <Image source={People} style={styleStart.people}/>
             <View style={{alignItems: 'center'}}>
-                <TouchableOpacity style={styleStart.btn} onPress={() => navigation.push('Sign')}>
+                <TouchableOpacity style={styleStart.btn} onPress={() => navigation.push('Sign', {navigation: navigation})}>
                     <Text style={{textAlign: 'center', color: '#FA4A0C', fontSize: 17}}>Comece Agora</Text>
                 </TouchableOpacity>
             </View>
